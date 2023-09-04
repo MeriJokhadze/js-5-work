@@ -20,4 +20,37 @@ burgerBar.addEventListener('click', function(){
 })
 
 
+let btnAdd = document.querySelector('.btn');
+let inputElToDo = document.querySelector('.input-form');
+let ulElToDo = document.querySelector('.list-ul')
+let clearAllBtn = document.querySelector('.clearList');
+
+btnAdd.addEventListener('click', function(){
+    let valueInfo = inputElToDo.value;
+
+    if(valueInfo == " "){
+        return;
+    }
+
+    let li = document.createElement('li');
+
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = "deleetee";
+
+
+    deleteBtn.addEventListener('click', function(){
+        li.remove();
+    })
+
+    li.textContent = valueInfo;
+    li.appendChild(deleteBtn);
+    ulElToDo.appendChild(li);
+    
+    inputElToDo.value = " ";
+
+});
+
+clearAllBtn.addEventListener('click', function(){
+    ulElToDo.innerHTML=" ";
+})
 
