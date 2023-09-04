@@ -20,12 +20,11 @@ header{
 }
 
 
-.nav-item ul{
+.ul-li{
     /* width: 700px; */
     display: flex;
     gap: 30px;
-    border: 2px solid firebrick;
-
+  
 }
 
 .burger-bar{
@@ -99,35 +98,59 @@ header{
     border-radius: 15px;
 }
 
-@media (max-width: 1200px) and (min-width: 320px) {
+@media (max-width: 1200px){
     .burger-bar {
         display: inline-block;
     }
-    
-    .nav-item ul {
-        position: fixed;
-        text-align: center;
-        top: 110px;
-        right: 2px;
-        flex-direction: column;
+    .nav-item{
+        display: none;
+    }
+    .nav-item.activeNav{
+        display: block;
+        
     }
 
-    .burger-bar span {
-        width: 10px;
-        border-bottom: 1px solid red;
-        color: blue;
+   
+    .ul-li {
+        position: fixed; 
+        text-align: center;
+        
+        top: 110px;
+        right: 300px; 
+        
+        flex-direction: column;
+        align-items: center;
     }
+
+
 
     .burger-bar {
         width: 35px;
         height: 30px;
         position: fixed;
-        top: 50px;
+        top: 10px;
         right: 60px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        position: relative;
+    }
+
+    .lineAc{
+        position: absolute;
+        transform-origin: center;
+      }
+      .line1Active {
+        transform: rotate(-45deg) ;
+    }
+
+    .line3Active{
+        transform: rotate(45deg) ;
+    }
+
+    .line2NO{
+        display: none;
     }
 
    .logo-div{
@@ -136,8 +159,9 @@ header{
     }
 
     .logo-img{
-        width: 0.1px;
-        height: 1px;
+        width:100px;
+        height: 50px;
+        margin-top: 35px;
     }
 
    body {
@@ -147,7 +171,6 @@ header{
         /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to left, #ef3b36, #ffffff);
     }
-
 
 
 }
