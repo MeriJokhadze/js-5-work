@@ -24,10 +24,15 @@ let btnAdd = document.querySelector('.btn');
 let inputElToDo = document.querySelector('.input-form');
 let ulElToDo = document.querySelector('.list-ul')
 let clearAllBtn = document.querySelector('.clearList');
+let formWraper = document.querySelector('.formW');
 
-btnAdd.addEventListener('click', function(){
+
+
+
+
+formWraper.addEventListener('click', function(i){
     let valueInfo = inputElToDo.value;
-
+    i.preventDefault();
     if(valueInfo == " "){
         return;
     }
@@ -35,7 +40,8 @@ btnAdd.addEventListener('click', function(){
     let li = document.createElement('li');
 
     let deleteBtn = document.createElement('button');
-    deleteBtn.textContent = "deleetee";
+    deleteBtn.classList.add("delete-item")
+    deleteBtn.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
 
 
     deleteBtn.addEventListener('click', function(){

@@ -99,7 +99,60 @@ header{
     border-radius: 15px;
 }
 
+/* input style */
+.todo{
+    color: #ef3b36;
+
+    display: inline-block;
+    margin: 50px 50%;
+}
+
+.title{
+    text-align: center;
+}
+.input-form{
+    border: none;
+    outline: none;
+    color: #ef3b36;
+    height: 30px;
+    width: 300px;
+    border-radius: 3px;
+    background-color: inherit;
+    border-bottom: 3px solid ;
+}
+
+.btn{
+    border: none;
+    background-color: inherit;
+}
+
+.fa-regular{
+    font-size: 20px;
+    vertical-align:bottom;
+    color: #ef3b36;
+}
+
+.clearList{
+    border: none;
+    background-color: inherit;
+}
+
+.fa-trash-can{
+    font-size: 20px;
+    vertical-align:bottom;
+    color: #ef3b36;
+}
+
+.delete-item{
+    border: none;
+    background-color: inherit;
+}
+
+
 @media (max-width: 1200px){
+    .todo{
+        display: none;
+    }
     .burger-bar {
         display: inline-block;
     }
